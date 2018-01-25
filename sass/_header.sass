@@ -1,0 +1,120 @@
+* 
+	box-sizing: border-box
+
+body 
+	background: $body-bg
+	color: $text-color
+
+.hero
+	background: url('../img/bg.png') no-repeat left top, linear-gradient(135deg,#275234 0%,#111A13 100%)
+	background-size: cover
+	padding: 200px 0
+	transform: skew(0deg, -4deg)
+	margin-top: -200px
+
+	&__container
+		width: 60%
+		z-index: 1
+		margin-top: 40px
+
+	&__content
+		transform: skew(0deg, 4deg)
+		max-width: 1170px
+		margin: 0 auto
+		position: relative
+		top: 100px
+		display: flex
+		padding: 0 1em
+
+	&__intro
+		font-size: 2rem
+		font-weight: 600
+		letter-spacing: 0.5px
+		color: $primary-color
+		text-transform: uppercase
+
+		&:after
+			background-color: $primary-color 
+			content: ""
+			display: block
+			width: 50px
+			height: 5px
+			margin-top: 0.8em 
+
+	&__desc
+		font-size: 6.5rem
+		font-weight: 800
+		font-style: italic
+		line-height: 1
+		letter-spacing: 1.5px
+		color: $light-color
+		text-transform: uppercase
+		margin: 0.4em 0 0.2em 0
+
+		& > span 
+			color: $primary-color
+
+.portrait
+	max-width: 660px
+	position: absolute
+	right: 0
+
+.portrait__shot
+	max-width: 100%
+
+.btn--green 
+	background-color: $primary-color
+
+.btn 
+	color: $light-color
+	font-weight: 800
+	font-style: italic
+	text-align: center
+	text-decoration: none
+	border: 0
+	outline: 0
+	font-size: 1.5rem
+	padding: 0.6em 1.5em
+	display: inline-block
+	transform: skew(-10deg)
+	text-transform: uppercase
+	&:hover
+		background: darken($primary-color, 5%)
+	& > span 
+		display: inline-block 
+		transform: skew(10deg)
+
+@media (max-width: 1170px) 
+
+	.portrait
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+
+@media (max-width: 767px)
+
+	.hero__intro:after
+		margin: 1em auto
+
+	.portrait
+		display: none
+
+	.hero__desc
+		font-size: 4.1rem
+		margin: 0.7em 0 0.7em 0
+		text-shadow: 3px 5px #3b8754
+
+		& > span 
+			color: $light-color
+
+	.hero__container
+		width: 100%
+		margin-top: 0px
+		text-align: center
+
+	.hero__content
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0 1em

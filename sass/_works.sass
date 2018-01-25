@@ -1,0 +1,92 @@
+.fade-in-top 
+	animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+	@keyframes fade-in-top 
+		0% 
+			transform: translateY(-50px)
+			opacity: 0
+		100% 
+			transform: translateY(0)
+			opacity: 1
+
+.fade-in-right 
+	animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+	@keyframes fade-in-right 
+		0% 
+			transform: translateX(50px)
+			opacity: 0
+		
+		100% 
+			transform: translateX(0)
+			opacity: 1
+
+.works__container
+	background: url('../img/works_bg.png') no-repeat center center
+	background-size: cover
+
+.food, .adventure, .watch, .airport
+	margin-bottom: 10em
+	max-width: 770px
+	background: linear-gradient(127deg, #dfe3ed, #ffffff)
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+
+.adventure, .airport
+	float: right
+
+.watch, .airport
+	clear: right
+
+.airport
+	margin-bottom: 0
+
+.adventure .works__description, .airport .works__description
+	left: -11.5em 
+
+.works
+	max-width: 1170px
+	margin: 0 auto
+	padding: 2em 1em
+
+	&__shot
+		max-width: 100%
+		margin-top: -2em
+		padding-bottom: 2em
+
+	&__description
+		position: absolute
+		right: -11.5em
+		max-width: 465px
+		text-align: center
+		padding: 1.5em 1em
+		background-color: $primary-color
+		font-size: 2rem
+		color: $light-color
+
+@media (max-width: 1170px) 
+
+	.adventure .works__description, .airport .works__description
+		left: 0 
+
+	.works__description
+		bottom: -3em
+		left: 0
+		right: 0
+		margin: -0.5em auto
+		font-size: 1.5rem
+		padding: 1em 1em
+
+	.food, .adventure, .watch, .airport
+		margin-bottom: 12em
+		max-width: 100%
+		flex-direction: column
+
+	.adventure, .airport
+		float: none
+	
+	.airport
+		margin-bottom: 0
+
+	.works__shot
+		max-width: 80%

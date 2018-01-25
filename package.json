@@ -1,0 +1,18 @@
+{
+  "name": "aleksi",
+  "version": "1.0.0",
+  "description": "Portfolio of Aleksi Liukkonen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "Aleksi Liukkonen",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
